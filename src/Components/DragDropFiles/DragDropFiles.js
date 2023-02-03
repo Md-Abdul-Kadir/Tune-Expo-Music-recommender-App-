@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import "./DragDropFiles.css";
-import imgpng from '../../img/image.png'
+import imgpng from "../../img/image.png";
 
 const DragDropFiles = () => {
   const [files, setFiles] = useState(null);
@@ -60,14 +60,14 @@ const DragDropFiles = () => {
             multiple
             onChange={(event) => setFiles(event.target.files)}
             hidden
-            accept="image/png, image/jpeg"
+            accept="image/jpeg"
             ref={inputRef}
           />
           <button
             className="btn btn-primary text-light px-5 py-3"
             onClick={() => inputRef.current.click()}
           >
-            <img src={imgpng} width="30px" className="me-2 ps-0" alt="icon"/>
+            <img src={imgpng} width="30px" className="me-2 ps-0" alt="icon" />
             Choose image
           </button>
         </div>
